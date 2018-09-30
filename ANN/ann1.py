@@ -44,7 +44,7 @@ X[:, 2] = labelencoder_X_2.fit_transform(X[:, 2])
 #onehotencoding is being done here only for index=1 th coloumn, as it is the only one having more than 2 values.
 onehotencoder = OneHotEncoder(categorical_features=[1])
 X = onehotencoder.fit_transform(X).toarray()
-#remove 1st coloumn(one dummy variable and it is useless. Theoritical idea= if not these two, it is the other one).
+#remove 1st coloumn(one dummy variable and it's useless. Theoritical idea= if not these two, it is the other one).
 X = X[:, 1:]
 
 # Splitting the dataset into the Training set and Test set(text size=0.2 means, 20% of our records are used for testing and remaining 0.8 i.e 80% for training.
